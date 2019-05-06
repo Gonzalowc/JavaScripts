@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        
+            var m=prompt("Escribe un mes del año (en numeros)");
+            switch (m)
+            {
+                case "1":
+                    $("#resultado").html("Enero");
+                    break;
+                case "2":
+                    $("#resultado").html("Fecbrero");
+                    break;
+                case "3":
+                    $("#resultado").html("Marzo");
+                    break;
+                case "4":
+                    $("#resultado").html("Abril");
+                    break;
+                case "5":
+                    $("#resultado").html("Mayo");
+                    break;
+                case "6":
+                    $("#resultado").html("Junio");
+                    break;
+                case "7":
+                    $("#resultado").html("Julio");
+                    break;
+                case "8":
+                    $("#resultado").html("Agosto");
+                    break;
+                case "9":
+                    $("#resultado").html("Septiembre");
+                    break;
+                case "10":
+                    $("#resultado").html("Octubre");
+                    break;
+                case "11":
+                    $("#resultado").html("Noviembre");
+                    break;
+                case "12":
+                    $("#resultado").html("Diciembre");
+                    break;
+                default:
+                {
+                    $("#resultado").html("Mes introducido incorrecto");
+                }
+            }
+        
+        });
+</script>
+</head>
+<body>
+    <p id="resultado"></p>
+</body>
+</html>

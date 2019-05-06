@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Media</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var n1=parseInt(prompt("Escribe un número"));
+            var n2=parseInt(prompt("Escribe otro número"));
+            var n3=parseInt(prompt("Escribe el último número"));
+            var media=(n1+n2+n3)/3
+            var condecimal = media.toFixed(2);
+            $("#total").html("La media de los números es : "+condecimal);
+        });
+    </script>
+</head>
+<body>
+    <p id="total"></p>
+</body>
+</html>

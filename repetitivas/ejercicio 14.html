@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var numero1=parseInt(prompt("Escribe el Km del primer vehiculo(menor)"));
+            var numero2=parseInt(prompt("Escribe el Km del segundo vehiculo(mayor)"));
+            
+            var numeroI= numero2-numero1
+            var numero3=numeroI/2
+            var numeroT=numero1+numero3
+            
+            $("#resultado").html("Los vehiculos se encuentran en el Km "+numeroT);
+        });
+        </script>
+</head>
+<body>
+    <p id="resultado"></p>
+</body>
+</html>

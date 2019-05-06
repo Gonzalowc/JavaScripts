@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var compra=0;
+            var precio=parseInt(prompt("Precio del producto:"));
+            while (precio!=0)
+            {
+                compra=compra+precio;                
+                precio=parseInt(prompt("Precio del producto.(si no tiene más productos inserte '0'):"));
+            }
+            var total=compra-(compra*0.15);
+            $("#respuesta").html("El precio final de la compra es: "+total);
+        });
+    </script>
+</head>
+<body>
+    <p id="respuesta"></p>
+</body>
+</html>

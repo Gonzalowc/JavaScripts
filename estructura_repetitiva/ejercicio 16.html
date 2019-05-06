@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        
+        var t=prompt("¿Cuánto ha durado la llamada? (en minutos)");
+        var d=prompt("¿En qué día de la semana realizó la llamada?");
+        var turno=prompt("¿En qué momento del día la hizo? por la mañana (m), por la tarde (t).");
+        var importellamada, total, asumar;
+        if(t<=5)
+        {
+            importellamada=1;
+        }
+        if(t>5 && t<=8)
+        {
+            importellamada=1.8;
+        }
+        if(t>=8 && t<=10)
+        {
+            importellamada=2.5;
+        }
+        if(t>10)
+        {
+            importellamada=3;
+        }
+        switch (d)
+        {
+            case "domingo":
+                asumar=importellamada*0.03;
+                total=importellamada+asumar;
+                $("#resultado").html("El importe de la llamada es: "+total+"€");
+                break;
+            default:
+            {
+                switch (turno)
+                {
+                    case "m":
+                        asumar=importellamada*0.15;
+                        total=importellamada+asumar;
+                        $("#resultado").html("El importe de la llamada es: "+total+"€");
+                        break;
+                    case "t":
+                        asumar=importellamada*0.10;
+                        total=importellamada+asumar;
+                        $("#resultado").html("El importe de la llamada es: "+total+"€");
+                        break;
+                    default:
+                    {
+                        $("#resultado").html("El día o turno del dia introducido incorrecto");
+                        break;
+                    }
+                }
+                    
+            }
+        
+        }
+        
+        });
+</script>
+</head>
+<body>
+    <p id="resultado"></p>
+</body>
+</html>

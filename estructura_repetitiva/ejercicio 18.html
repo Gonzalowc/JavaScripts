@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        
+        var d=prompt("Escribe un dia de la semana (en numeros)");
+        switch (d)
+        {
+            case "1":
+                $("#resultado").html("Lunes");
+                break;
+            case "2":
+                $("#resultado").html("Martess");
+                break;
+            case "3":
+                $("#resultado").html("Miercoles");
+                break;
+            case "4":
+                $("#resultado").html("Jueves");
+                break;
+            case "5":
+                $("#resultado").html("Viernes");
+                break;
+            case "6":
+                $("#resultado").html("Sabado");
+                break;
+            case "7":
+                $("#resultado").html("Domingo");
+                break;
+            default:
+            {
+                $("#resultado").html("Dia introducido incorrecto");
+            }
+        }
+        
+        });
+</script>
+</head>
+<body>
+    <p id="resultado"></p>
+</body>
+</html>
